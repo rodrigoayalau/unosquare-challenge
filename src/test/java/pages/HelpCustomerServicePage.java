@@ -2,6 +2,7 @@ package pages;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -15,7 +16,7 @@ import setup.KeyPad;
 
 public class HelpCustomerServicePage extends KeyPad{
 	
-	WebDriver driver = null;
+	WebDriver driver;
 	
 	@FindBy(id="helpsearch")
 	WebElement helpSearchInput;
@@ -32,15 +33,16 @@ public class HelpCustomerServicePage extends KeyPad{
 	public HelpCustomerServicePage(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver, this);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 	
 	public boolean searchInInput(String searchCriteria) {
 		boolean isSucceed;
 		try {
-			WebDriverWait wait = new WebDriverWait(driver, 6);
-			WebElement inputSearch = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("helpsearch")));
-			inputSearch.clear();
-			inputSearch.sendKeys(searchCriteria);
+			//WebDriverWait wait = new WebDriverWait(driver, 6);
+			//WebElement inputSearch = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("helpsearch")));
+			helpSearchInput.clear();
+			helpSearchInput.sendKeys(searchCriteria);
 			clickEnter(helpSearchInput);
 			isSucceed = true;
 		} catch (Exception e) {
