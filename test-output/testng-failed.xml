@@ -5,7 +5,10 @@
     <classes>
       <class name="scenarios.SecondTestCase">
         <methods>
+          <include name="newCustomerLink"/>
           <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="newAccounts"/>
           <include name="validateEchoSupport"/>
           <include name="newAccountDetailsAndTermsConditions"/>
           <include name="searchCriteria"/>

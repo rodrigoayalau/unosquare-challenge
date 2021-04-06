@@ -27,11 +27,10 @@ import setup.SetUp;
  * Have an interface implemented - DONE
  * Have an abstract class implemented - DONE
  * Apply Implicit and explicit wait - DONE
-
  * Use Specflow or NUnit, in case of Java use TestNG or Cucumber, in case of JavaScript use NightWatch - DONE
- * Use an App.config to set the URL, the Environment and your DB connection (As this is a Production App, set default value to Prod)
- * Use a Json file to provide the data to your scripts (Search values)
- * Implement an API call to get Personal Data (http://dummy.restapiexample.com/api/v1/employee/1) or (http://dummy.restapiexample.com/api/v1/employees)
+ * Use an App.config to set the URL, the Environment and your DB connection (As this is a Production App, set default value to Prod) - DONE
+ * Use a Json file to provide the data to your scripts (Search values) - DONE (for SecondTestCase)
+ * Implement an API call to get Personal Data (http://dummy.restapiexample.com/api/v1/employee/1) or (http://dummy.restapiexample.com/api/v1/employees) - DONE
  * Implement a report using extend reports or a custom one
  * Create a reusable method for DB Connection
 */

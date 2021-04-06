@@ -3,10 +3,13 @@ package pages;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import setup.KeyPad;
 
@@ -34,8 +37,10 @@ public class HelpCustomerServicePage extends KeyPad{
 	public boolean searchInInput(String searchCriteria) {
 		boolean isSucceed;
 		try {
-			helpSearchInput.clear();
-			helpSearchInput.sendKeys(searchCriteria);
+			WebDriverWait wait = new WebDriverWait(driver, 6);
+			WebElement inputSearch = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("helpsearch")));
+			inputSearch.clear();
+			inputSearch.sendKeys(searchCriteria);
 			clickEnter(helpSearchInput);
 			isSucceed = true;
 		} catch (Exception e) {

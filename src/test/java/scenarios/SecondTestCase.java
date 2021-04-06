@@ -18,6 +18,17 @@ import services.JsonService;
 import setup.SetUp;
 
 public class SecondTestCase extends SetUp {
+	
+	/*
+	 *  *********************************************
+	 *  IN THE MEHTOD newAccountDetailsAndTermsConditions()
+	 *  (I crated a json service to retrieve the data)
+	 *  SOMETIMES THE SERVICE GETS A 429 CODE AND IT CANT
+	 *  GET THE DATA FROM THE JSON, THE SERVICES SHOWS A
+	 *  'TOO MANY REQUES IN THE BROWSER' RE RUN IT OR change
+	 *  the employee_name for the explicit way.
+	 *  **********************************************
+	 */
 
 	FileInputStream fileInput = null;
 	String driverExplorer;
@@ -31,6 +42,7 @@ public class SecondTestCase extends SetUp {
 	String supportItem3;
 	String supportItem4;
 	String supportItem5;
+	String DBCoonection;
 
 	@BeforeClass(enabled = true)
 	public void setUp() throws IOException {
@@ -40,18 +52,23 @@ public class SecondTestCase extends SetUp {
 		fileInput = new FileInputStream(file);
 		properties.load(fileInput);
 		// data.properties file implemented to store any kind of data
-		this.driverExplorer = properties.getProperty("driverExplorer");
-		this.url = properties.getProperty("url");
-		this.searchCriteria = properties.getProperty("searchCriteria");
-		this.supportLink = properties.getProperty("supportLink");
-		this.supportItem1 = properties.getProperty("supportItem1");
-		this.supportItem2 = properties.getProperty("supportItem2");
-		this.supportItem3 = properties.getProperty("supportItem3");
-		this.supportItem4 = properties.getProperty("supportItem4");
-		this.supportItem5 = properties.getProperty("supportItem5");
-		initializeChromeExplorer();
-		driver.get(url);
-		driver.manage().window().maximize();
+		this.DBCoonection = properties.getProperty("dbconnection");
+		if(this.DBCoonection == "PROD_URL") {
+			this.driverExplorer = properties.getProperty("driverExplorer");
+			this.url = properties.getProperty("url");
+			this.searchCriteria = properties.getProperty("searchCriteria");
+			this.supportLink = properties.getProperty("supportLink");
+			this.supportItem1 = properties.getProperty("supportItem1");
+			this.supportItem2 = properties.getProperty("supportItem2");
+			this.supportItem3 = properties.getProperty("supportItem3");
+			this.supportItem4 = properties.getProperty("supportItem4");
+			this.supportItem5 = properties.getProperty("supportItem5");
+			initializeChromeExplorer();
+			driver.get(url);
+			driver.manage().window().maximize();			
+		} else {
+			//System.out.println("Value of DBConnection is incorrect.");
+		}
 	}
 
 	// 2. Locate at the upper right corner the button: Hello, Sign In Account &
@@ -101,6 +118,7 @@ public class SecondTestCase extends SetUp {
 	public void searchCriteria() {
 		HelpCustomerServicePage search = new HelpCustomerServicePage(driver);
 		try {
+			// Explicit wait in the method
 			Assert.assertTrue(search.searchInInput(searchCriteria), "Failed trying to search.");
 			Assert.assertTrue(search.seachCustomerLink(supportLink), "Failed trying to click link.");
 		} catch (Exception e) {
