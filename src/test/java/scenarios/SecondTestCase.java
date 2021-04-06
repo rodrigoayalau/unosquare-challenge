@@ -25,6 +25,10 @@ public class SecondTestCase extends SetUp {
 	String accountEmail;
 	String searchCriteria;
 	String supportLink;
+	String supportItem1;
+	String supportItem2;
+	String supportItem3;
+	String supportItem4;
 
 	@BeforeClass(enabled = true)
 	public void setUp() throws IOException {
@@ -38,6 +42,10 @@ public class SecondTestCase extends SetUp {
 		this.url = properties.getProperty("url");
 		this.searchCriteria = properties.getProperty("searchCriteria");
 		this.supportLink = properties.getProperty("supportLink");
+		this.supportItem1 = properties.getProperty("supportItem1");
+		this.supportItem2 = properties.getProperty("supportItem2");
+		this.supportItem3 = properties.getProperty("supportItem3");
+		this.supportItem4 = properties.getProperty("supportItem4");
 		initializeChromeExplorer();
 		driver.get(url);
 		driver.manage().window().maximize();
@@ -96,5 +104,15 @@ public class SecondTestCase extends SetUp {
 			e.printStackTrace();
 		}
 	}
-
+	
+	// 9. Following elements should be displayed: Getting Started, Wi-Fi and Bluetooth, Device Software and Hardware, TroubleShooting 
+	@Test(priority = 5, enabled = true)
+	public void validateEchoSupport() {
+		HelpCustomerServicePage echoSupport = new HelpCustomerServicePage(driver);
+		try {
+			Assert.assertTrue(echoSupport.validateResults(supportItem1, supportItem2, supportItem3, supportItem4), "Failed trying to validate results.");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 }

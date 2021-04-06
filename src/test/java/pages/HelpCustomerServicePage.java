@@ -23,6 +23,9 @@ public class HelpCustomerServicePage extends KeyPad{
 	@FindBy(xpath="//a[contains(text(), 'Echo Support')]")
 	WebElement linkForEchoSupport;
 	
+	@FindBy(xpath="//div[@class='a-column a-span4']//child::h4")
+	List<WebElement> resultsText;
+	
 	public HelpCustomerServicePage(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver, this);
@@ -59,6 +62,27 @@ public class HelpCustomerServicePage extends KeyPad{
 		return isSucceed;
 	}
 	
+	
+	public boolean validateResults(String item1, String item2, String item3, String item4) {
+		boolean isSucceed;
+		List<String> theResults = new ArrayList<String>();
+		List<String> myList = new ArrayList<String> ();
+		myList.add(item1);
+		myList.add(item2);
+		myList.add(item3);
+		myList.add(item4);
+		try {
+			resultsText.forEach(result -> {
+				theResults.add(result.getText());
+				System.out.println(result.getText());
+			});
+			isSucceed = true;
+		} catch (Exception e) {
+			e.printStackTrace();
+			isSucceed = false;
+		}
+		return isSucceed;
+	}
 	
 	
 	
