@@ -7,8 +7,6 @@
         <methods>
           <include name="shopCartPageValidation"/>
           <include name="setUp"/>
-          <include name="getPrice"/>
-          <include name="phoneSearch"/>
           <include name="validatePrices"/>
           <include name="clickCartButton"/>
         </methods>

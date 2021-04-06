@@ -1,24 +1,52 @@
 package setup;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.testng.annotations.BeforeClass;
 
-public class SetUp {
+public class SetUp implements ISetUp{
 
-	public WebDriver driver = null;
+	protected WebDriver driver = null;
+	FileInputStream fileInput = null;
+	String driverExplorer;
 
-	public WebDriver initializeExplorer(String theDriver) {
-		switch (theDriver) {
-		case "chrome":
-			System.setProperty("webdriver.chrome.driver", "C:/drivers_explorers/chromedriver.exe");
-			driver = new ChromeDriver();
-			break;
-		case "ie":
-			System.setProperty("webdriver.edge.driver", "C:/drivers_explorers/msedgedriver.exe");
-			driver = new EdgeDriver();
-			break;
-		}
+	@Override
+	public void readPropertiesFile() throws IOException {
+		Properties properties= new Properties();
+		File file = new File("D:\\Development\\Java\\unosquare-challenge\\src\\test\\resources\\resoruces\\data.properties");
+		fileInput = new FileInputStream(file);
+		properties.load(fileInput);
+		
+	}
+	
+	@Override
+	public WebDriver initializeChromeExplorer() {
+		System.setProperty("webdriver.chrome.driver", "C:/drivers_explorers/chromedriver.exe");
+		driver = new ChromeDriver();
 		return driver;
 	}
+
+	@Override
+	public WebDriver initializeFireFoxExplorer() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public WebDriver initializeIEExplorer() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+
+
+	
 }

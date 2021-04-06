@@ -5,9 +5,11 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import pages.CartValidationPage;
@@ -17,8 +19,9 @@ import pages.SearchMainPage;
 import pages.ShopCartPage;
 import setup.SetUp;
 
+//Interface implemented for SetUp class
 public class CellphoneScenario extends SetUp{
-	
+
 	String pricePhone;
 	FileInputStream fileInput = null;
 	String cellphoneType;
@@ -35,7 +38,7 @@ public class CellphoneScenario extends SetUp{
 		this.driverExplorer = properties.getProperty("driverExplorer");
 		this.cellphoneType = properties.getProperty("cellphone");
 		this.url = properties.getProperty("url");
-		initializeExplorer(this.driverExplorer);
+		initializeChromeExplorer();
 		driver.get(url);
 		driver.manage().window().maximize();
 	}
@@ -100,7 +103,7 @@ public class CellphoneScenario extends SetUp{
 		}
 	}
 	
-	@AfterClass(enabled=false)
+	@AfterClass(enabled=true)
 	public void tearDown() {
 		driver.close();
 		driver.quit();

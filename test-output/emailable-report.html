@@ -31,50 +31,22 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">5</td><td class="numi">0</td><td class="numi">11.8 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">5</td><td class="numi">5</td><td class="numi">0</td><td class="numi">0</td><td class="numi">16.2 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
-<tr><th colspan="4">Default test &#8212; failed (configuration methods)</th></tr>
-<tr class="failedodd"><td rowspan="1">scenarios.CellphoneScenario</td><td><a href="#m1"><b>setUp</b>  </a></td><td class="numi">1</td><td>1617681084425</td><td class="numi">0</td></tr>
-<tr><th colspan="4">Default test &#8212; skipped</th></tr>
-<tr class="skippedodd"><td rowspan="5">scenarios.CellphoneScenario</td><td><a href="#m2"><b>phoneSearch</b>  </a></td><td class="numi">1</td><td>1617681096228</td><td class="numi">0</td></tr><tr class="skippedodd"><td><a href="#m3"><b>getPrice</b>  </a></td><td class="numi">1</td><td>1617681096229</td><td class="numi">0</td></tr><tr class="skippedodd"><td><a href="#m4"><b>validatePrices</b>  </a></td><td class="numi">1</td><td>1617681096230</td><td class="numi">0</td></tr><tr class="skippedodd"><td><a href="#m5"><b>clickCartButton</b>  </a></td><td class="numi">1</td><td>1617681096231</td><td class="numi">0</td></tr><tr class="skippedodd"><td><a href="#m6"><b>shopCartPageValidation</b>  </a></td><td class="numi">1</td><td>1617681096232</td><td class="numi">0</td></tr>
+<tr><th colspan="4">Default test &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="5">scenarios.CellphoneScenario</td><td><a href="#m1"><b>phoneSearch</b>  </a></td><td class="numi">1</td><td>1617684148114</td><td class="numi">2490</td></tr><tr class="passedodd"><td><a href="#m2"><b>getPrice</b>  </a></td><td class="numi">1</td><td>1617684150605</td><td class="numi">2731</td></tr><tr class="passedodd"><td><a href="#m3"><b>validatePrices</b>  </a></td><td class="numi">1</td><td>1617684153337</td><td class="numi">1112</td></tr><tr class="passedodd"><td><a href="#m4"><b>clickCartButton</b>  </a></td><td class="numi">1</td><td>1617684154450</td><td class="numi">1317</td></tr><tr class="passedodd"><td><a href="#m5"><b>shopCartPageValidation</b>  </a></td><td class="numi">1</td><td>1617684155768</td><td class="numi">169</td></tr>
 </table>
 <h1>Default test</h1>
-<h2 id="m1">scenarios.CellphoneScenario:setUp</h2>
-<div style="padding-left:3em">
-<p>chrome not reachable
-  (Session info: chrome=89.0.4389.114)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-88S9RBJ&apos;, ip: &apos;192.168.0.10&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.114, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\idsay\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55238}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 8731c00a0e2c1510c1110253773e6d26</p>
-java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-<br/>at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
-<br/>at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-<br/>at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-<br/>at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:837)
-<br/>at scenarios.CellphoneScenario.setUp(CellphoneScenario.java:40)
-<br/>25 lines not shown
-</div>
+<h2 id="m1">scenarios.CellphoneScenario:shopCartPageValidation</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">scenarios.CellphoneScenario:validatePrices</h2>
+<h2 id="m2">scenarios.CellphoneScenario:getPrice</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m3">scenarios.CellphoneScenario:phoneSearch</h2>
+<h2 id="m3">scenarios.CellphoneScenario:clickCartButton</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m4">scenarios.CellphoneScenario:getPrice</h2>
+<h2 id="m4">scenarios.CellphoneScenario:validatePrices</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m5">scenarios.CellphoneScenario:shopCartPageValidation</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m6">scenarios.CellphoneScenario:clickCartButton</h2>
+<h2 id="m5">scenarios.CellphoneScenario:phoneSearch</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>
