@@ -1,4 +1,10 @@
 package scenarios;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -13,12 +19,25 @@ import setup.SetUp;
 
 public class CellphoneScenario extends SetUp{
 	
-	String cellphoneType = "Samsung Galaxy Note 20";
 	String pricePhone;
+	FileInputStream fileInput = null;
+	String cellphoneType;
+	String driverExplorer;
+	String url;
 	
 	@BeforeClass(enabled=true)
-	public void setUp() {
-		initializeExplorer();
+	public void setUp() throws IOException {
+		Properties properties= new Properties();
+		File file = new File("D:\\Development\\Java\\unosquare-challenge\\src\\test\\resources\\resoruces\\data.properties");
+		fileInput = new FileInputStream(file);
+		properties.load(fileInput);
+		// data.properties file implemented to store any kind of data
+		this.driverExplorer = properties.getProperty("driverExplorer");
+		this.cellphoneType = properties.getProperty("cellphone");
+		this.url = properties.getProperty("url");
+		initializeExplorer(this.driverExplorer);
+		driver.get(url);
+		driver.manage().window().maximize();
 	}
 	
 	//2. Search for Samsung Galaxy Note 20.
