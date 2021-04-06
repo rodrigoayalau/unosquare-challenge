@@ -31,8 +31,8 @@ import setup.SetUp;
  * Use an App.config to set the URL, the Environment and your DB connection (As this is a Production App, set default value to Prod) - DONE
  * Use a Json file to provide the data to your scripts (Search values) - DONE (for SecondTestCase)
  * Implement an API call to get Personal Data (http://dummy.restapiexample.com/api/v1/employee/1) or (http://dummy.restapiexample.com/api/v1/employees) - DONE
- * Implement a report using extend reports or a custom one
- * Create a reusable method for DB Connection
+ * Implement a report using extend reports or a custom one - DONE
+ * Create a reusable method for DB Connection - DONE
 */
 
 //Interface implemented for SetUp class
