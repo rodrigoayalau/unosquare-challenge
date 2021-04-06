@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -16,6 +17,7 @@ import pages.CartValidationPage;
 import pages.FirstResultPage;
 import pages.ProductPage;
 import pages.SearchMainPage;
+import pages.ShopCartFlow;
 import pages.ShopCartPage;
 import setup.SetUp;
 
@@ -48,6 +50,7 @@ public class CellphoneScenario extends SetUp{
 	public void phoneSearch() {
 		SearchMainPage searchPage = new SearchMainPage(driver);
 		try {
+			// Explicit wait in the method
 			Assert.assertTrue(searchPage.searchCriteria(cellphoneType), "Failed trying to search criteria.");
 			Assert.assertTrue(searchPage.clickButtonSearch(), "Failed trying to click search button.");
 		} catch(Exception e) {
@@ -82,6 +85,7 @@ public class CellphoneScenario extends SetUp{
 	// 6. Click on Add to Cart.
 	@Test(priority=4, enabled=true)
 	public void clickCartButton() {
+		// Explicit wait in the method
 		CartValidationPage validateItem = new CartValidationPage(driver);
 		try {
 			Assert.assertTrue(validateItem.clickCartButton(), "Failed trying to click cart button.");
@@ -94,10 +98,13 @@ public class CellphoneScenario extends SetUp{
 	// 8. Delete Item.
 	@Test(priority= 5, enabled=true)
 	public void shopCartPageValidation() {
-		ShopCartPage validateItem = new ShopCartPage(driver);
+		//Abstract class
+		ShopCartFlow validateItem = new ShopCartPage(driver);
 		try {
 			Assert.assertTrue(validateItem.priceValidation(pricePhone), "Prices do not match.");
+			//Implicit wait to validate text for empty cart
 			Assert.assertTrue(validateItem.deleteItem(), "Failed trying to delete item in cart.");
+			driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
