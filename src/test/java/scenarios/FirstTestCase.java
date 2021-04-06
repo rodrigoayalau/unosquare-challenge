@@ -37,7 +37,7 @@ import setup.SetUp;
 */
 
 //Interface implemented for SetUp class
-public class CellphoneScenario extends SetUp {
+public class FirstTestCase extends SetUp {
 
 	String pricePhone;
 	FileInputStream fileInput = null;

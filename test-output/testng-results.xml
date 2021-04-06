@@ -2,40 +2,40 @@
 <testng-results total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-04-06T05:22:14Z" name="Default suite" finished-at="2021-04-06T05:22:33Z" duration-ms="18362">
+  <suite started-at="2021-04-06T05:27:17Z" name="Default suite" finished-at="2021-04-06T05:27:36Z" duration-ms="19004">
     <groups>
     </groups>
-    <test started-at="2021-04-06T05:22:14Z" name="Default test" finished-at="2021-04-06T05:22:33Z" duration-ms="18362">
-      <class name="scenarios.CellphoneScenario">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:scenarios.CellphoneScenario@272113c4]" started-at="2021-04-06T00:22:14Z" name="setUp" finished-at="2021-04-06T00:22:18Z" duration-ms="3563" status="PASS">
+    <test started-at="2021-04-06T05:27:17Z" name="Default test" finished-at="2021-04-06T05:27:36Z" duration-ms="19004">
+      <class name="scenarios.FirstTestCase">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:scenarios.FirstTestCase@272113c4]" started-at="2021-04-06T00:27:17Z" name="setUp" finished-at="2021-04-06T00:27:21Z" duration-ms="4202" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="phoneSearch()[pri:0, instance:scenarios.CellphoneScenario@272113c4]" started-at="2021-04-06T00:22:18Z" name="phoneSearch" finished-at="2021-04-06T00:22:20Z" duration-ms="2060" status="PASS">
+        <test-method signature="phoneSearch()[pri:0, instance:scenarios.FirstTestCase@272113c4]" started-at="2021-04-06T00:27:21Z" name="phoneSearch" finished-at="2021-04-06T00:27:23Z" duration-ms="2459" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- phoneSearch -->
-        <test-method signature="getPrice()[pri:0, instance:scenarios.CellphoneScenario@272113c4]" started-at="2021-04-06T00:22:20Z" name="getPrice" finished-at="2021-04-06T00:22:23Z" duration-ms="2810" status="PASS">
+        <test-method signature="getPrice()[pri:0, instance:scenarios.FirstTestCase@272113c4]" started-at="2021-04-06T00:27:23Z" name="getPrice" finished-at="2021-04-06T00:27:26Z" duration-ms="3165" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getPrice -->
-        <test-method signature="validatePrices()[pri:0, instance:scenarios.CellphoneScenario@272113c4]" started-at="2021-04-06T00:22:23Z" name="validatePrices" finished-at="2021-04-06T00:22:25Z" duration-ms="2109" status="PASS">
+        <test-method signature="validatePrices()[pri:0, instance:scenarios.FirstTestCase@272113c4]" started-at="2021-04-06T00:27:26Z" name="validatePrices" finished-at="2021-04-06T00:27:28Z" duration-ms="1504" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validatePrices -->
-        <test-method signature="clickCartButton()[pri:0, instance:scenarios.CellphoneScenario@272113c4]" started-at="2021-04-06T00:22:25Z" name="clickCartButton" finished-at="2021-04-06T00:22:27Z" duration-ms="2062" status="PASS">
+        <test-method signature="clickCartButton()[pri:0, instance:scenarios.FirstTestCase@272113c4]" started-at="2021-04-06T00:27:28Z" name="clickCartButton" finished-at="2021-04-06T00:27:30Z" duration-ms="2197" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickCartButton -->
-        <test-method signature="shopCartPageValidation()[pri:0, instance:scenarios.CellphoneScenario@272113c4]" started-at="2021-04-06T00:22:27Z" name="shopCartPageValidation" finished-at="2021-04-06T00:22:28Z" duration-ms="1021" status="PASS">
+        <test-method signature="shopCartPageValidation()[pri:0, instance:scenarios.FirstTestCase@272113c4]" started-at="2021-04-06T00:27:30Z" name="shopCartPageValidation" finished-at="2021-04-06T00:27:31Z" duration-ms="722" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- shopCartPageValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:scenarios.CellphoneScenario@272113c4]" started-at="2021-04-06T00:22:28Z" name="tearDown" finished-at="2021-04-06T00:22:33Z" duration-ms="4723" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:scenarios.FirstTestCase@272113c4]" started-at="2021-04-06T00:27:31Z" name="tearDown" finished-at="2021-04-06T00:27:36Z" duration-ms="4740" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- scenarios.CellphoneScenario -->
+      </class> <!-- scenarios.FirstTestCase -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
