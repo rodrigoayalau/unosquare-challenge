@@ -6,6 +6,7 @@
       <class name="scenarios.SecondTestCase">
         <methods>
           <include name="setUp"/>
+          <include name="validateEchoSupport"/>
           <include name="newAccountDetailsAndTermsConditions"/>
           <include name="searchCriteria"/>
         </methods>

@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -29,6 +30,7 @@ public class SecondTestCase extends SetUp {
 	String supportItem2;
 	String supportItem3;
 	String supportItem4;
+	String supportItem5;
 
 	@BeforeClass(enabled = true)
 	public void setUp() throws IOException {
@@ -46,6 +48,7 @@ public class SecondTestCase extends SetUp {
 		this.supportItem2 = properties.getProperty("supportItem2");
 		this.supportItem3 = properties.getProperty("supportItem3");
 		this.supportItem4 = properties.getProperty("supportItem4");
+		this.supportItem5 = properties.getProperty("supportItem5");
 		initializeChromeExplorer();
 		driver.get(url);
 		driver.manage().window().maximize();
@@ -110,9 +113,16 @@ public class SecondTestCase extends SetUp {
 	public void validateEchoSupport() {
 		HelpCustomerServicePage echoSupport = new HelpCustomerServicePage(driver);
 		try {
-			Assert.assertTrue(echoSupport.validateResults(supportItem1, supportItem2, supportItem3, supportItem4), "Failed trying to validate results.");
+			//To compare to list one given and other one retrieved, I use a equals() method to validate and compare thw two lists.
+			Assert.assertTrue(echoSupport.validateResults(supportItem1, supportItem2, supportItem3, supportItem4, supportItem5), "Failed trying to validate results.");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+	
+	@AfterClass(enabled = true)
+	public void tearDown() {
+		driver.close();
+		driver.quit();
 	}
 }

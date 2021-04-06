@@ -30,24 +30,24 @@ public class JsonService {
 			int responseCode = con.getResponseCode();
 			System.out.println("\nSending 'GET' request url: " + stringJsonURL);
 			System.out.println("\nResponse Code: " + responseCode);
-			BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
-			String inputLine;
-			StringBuffer response = new StringBuffer();
-			while ((inputLine = in.readLine()) != null) {
-				response.append(inputLine);
-			}
-			in.close();
-			System.out.println(response.toString());
-
-			JSONObject myresponse = new JSONObject(response.toString());
-			System.out.println(myresponse);
-
-			System.out.println("status: " + myresponse.getString("status"));
-
-			JSONObject dataDetails = new JSONObject(myresponse.getJSONObject("data").toString());
-			System.out.println("data: " + dataDetails);
-			System.out.println("Name: " + dataDetails.getString("employee_name"));
-			this.employee_name = dataDetails.getString("employee_name");
+				BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
+				String inputLine;
+				StringBuffer response = new StringBuffer();
+				while ((inputLine = in.readLine()) != null) {
+					response.append(inputLine);
+				}
+				in.close();
+				System.out.println(response.toString());
+				
+				JSONObject myresponse = new JSONObject(response.toString());
+				System.out.println(myresponse);
+				
+				System.out.println("status: " + myresponse.getString("status"));
+				
+				JSONObject dataDetails = new JSONObject(myresponse.getJSONObject("data").toString());
+				System.out.println("data: " + dataDetails);
+				System.out.println("Name: " + dataDetails.getString("employee_name"));
+				this.employee_name = dataDetails.getString("employee_name");				
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

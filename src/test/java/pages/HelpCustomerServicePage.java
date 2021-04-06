@@ -63,20 +63,23 @@ public class HelpCustomerServicePage extends KeyPad{
 	}
 	
 	
-	public boolean validateResults(String item1, String item2, String item3, String item4) {
-		boolean isSucceed;
+	public boolean validateResults(String item1, String item2, String item3, String item4, String item5) {
+		boolean isSucceed =  false;
 		List<String> theResults = new ArrayList<String>();
 		List<String> myList = new ArrayList<String> ();
 		myList.add(item1);
 		myList.add(item2);
 		myList.add(item3);
 		myList.add(item4);
+		myList.add(item5);
 		try {
 			resultsText.forEach(result -> {
 				theResults.add(result.getText());
 				System.out.println(result.getText());
 			});
-			isSucceed = true;
+			if(theResults.equals(myList)) {				
+				isSucceed = true;
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 			isSucceed = false;
