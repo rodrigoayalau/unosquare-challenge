@@ -14,6 +14,9 @@ public class CreateAccountPage {
 
 	@FindBy(id = "ap_email")
 	WebElement customerEmailInput;
+	
+	@FindBy(xpath = "//div[@id='legalTextRow']//child::a[contains(text(), 'Conditions of Use') or contains(text(), 'Aviso de Privacidad')]")
+	WebElement conditionUseLink;
 
 	public CreateAccountPage(WebDriver driver) {
 		this.driver = driver;
@@ -25,6 +28,18 @@ public class CreateAccountPage {
 		try {
 			customerNameInput.sendKeys(name);
 			customerEmailInput.sendKeys(email);
+			isSucceed = true;
+		} catch (Exception e) {
+			e.printStackTrace();
+			isSucceed = false;
+		}
+		return isSucceed;
+	}
+	
+	public boolean clickConditionUse() {
+		boolean isSucceed;
+		try {
+			conditionUseLink.click();
 			isSucceed = true;
 		} catch (Exception e) {
 			e.printStackTrace();

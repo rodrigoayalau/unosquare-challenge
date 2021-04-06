@@ -1,17 +1,10 @@
 package services;
 
 import java.io.BufferedReader;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.net.URLConnection;
-
 import org.json.JSONObject;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
 
 public class JsonService {
 
@@ -22,6 +15,7 @@ public class JsonService {
 	public String employee_email = "Firstname.Lastname@fake.com";
 
 	public JsonService() {
+		
 	}
 
 	/*
