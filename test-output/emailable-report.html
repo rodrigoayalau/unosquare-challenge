@@ -31,22 +31,40 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">5</td><td class="numi">5</td><td class="numi">0</td><td class="numi">0</td><td class="numi">19.0 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">2</td><td class="numi">2</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">6.5 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
+<tr><th colspan="4">Default test &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="1">scenarios.SecondTestCase</td><td><a href="#m1"><b>newAccountDetails</b>  </a></td><td class="numi">1</td><td>1617690149914</td><td class="numi">26</td></tr>
 <tr><th colspan="4">Default test &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="5">scenarios.FirstTestCase</td><td><a href="#m1"><b>phoneSearch</b>  </a></td><td class="numi">1</td><td>1617686841235</td><td class="numi">2459</td></tr><tr class="passedodd"><td><a href="#m2"><b>getPrice</b>  </a></td><td class="numi">1</td><td>1617686843696</td><td class="numi">3165</td></tr><tr class="passedodd"><td><a href="#m3"><b>validatePrices</b>  </a></td><td class="numi">1</td><td>1617686846862</td><td class="numi">1504</td></tr><tr class="passedodd"><td><a href="#m4"><b>clickCartButton</b>  </a></td><td class="numi">1</td><td>1617686848367</td><td class="numi">2197</td></tr><tr class="passedodd"><td><a href="#m5"><b>shopCartPageValidation</b>  </a></td><td class="numi">1</td><td>1617686850565</td><td class="numi">722</td></tr>
+<tr class="passedodd"><td rowspan="2">scenarios.SecondTestCase</td><td><a href="#m2"><b>newAccounts</b>  </a></td><td class="numi">1</td><td>1617690148475</td><td class="numi">871</td></tr><tr class="passedodd"><td><a href="#m3"><b>newCustomerLink</b>  </a></td><td class="numi">1</td><td>1617690149348</td><td class="numi">564</td></tr>
 </table>
 <h1>Default test</h1>
-<h2 id="m1">scenarios.FirstTestCase:getPrice</h2>
+<h2 id="m1">scenarios.SecondTestCase:newAccountDetails</h2>
+<div style="padding-left:3em">
+<p>com.google.gson.stream.MalformedJsonException: Use JsonReader.setLenient(true) to accept malformed JSON at line 1 column 6 path $</p>
+com.google.gson.JsonParser.parseReader(JsonParser.java:66)
+<br/>at com.google.gson.JsonParser.parseString(JsonParser.java:47)
+<br/>at com.google.gson.JsonParser.parse(JsonParser.java:98)
+<br/>at services.JsonService.&lt;init&gt;(JsonService.java:13)
+<br/>at scenarios.SecondTestCase.newAccountDetails(SecondTestCase.java:64)
+<br/>25 lines not shown
+<p>Caused by Use JsonReader.setLenient(true) to accept malformed JSON at line 1 column 6 path $</p>
+com.google.gson.stream.JsonReader.syntaxError(JsonReader.java:1564)
+<br/>at com.google.gson.stream.JsonReader.checkLenient(JsonReader.java:1405)
+<br/>at com.google.gson.stream.JsonReader.doPeek(JsonReader.java:543)
+<br/>at com.google.gson.stream.JsonReader.peek(JsonReader.java:426)
+<br/>at com.google.gson.JsonParser.parseReader(JsonParser.java:61)
+<br/>at com.google.gson.JsonParser.parseString(JsonParser.java:47)
+<br/>at com.google.gson.JsonParser.parse(JsonParser.java:98)
+<br/>at services.JsonService.&lt;init&gt;(JsonService.java:13)
+<br/>at scenarios.SecondTestCase.newAccountDetails(SecondTestCase.java:64)
+<br/>25 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">scenarios.FirstTestCase:clickCartButton</h2>
+<h2 id="m2">scenarios.SecondTestCase:newCustomerLink</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m3">scenarios.FirstTestCase:validatePrices</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m4">scenarios.FirstTestCase:shopCartPageValidation</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m5">scenarios.FirstTestCase:phoneSearch</h2>
+<h2 id="m3">scenarios.SecondTestCase:newAccounts</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>

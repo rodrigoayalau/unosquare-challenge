@@ -24,6 +24,9 @@ public class SearchMainPage {
 	@FindBy(id="nav-search-submit-button")
 	WebElement searchButton;
 	
+	@FindBy(id="nav-link-accountList-nav-line-1")
+	WebElement accountLink;
+	
 		
 	public SearchMainPage(WebDriver driver) {
 		this.driver = driver;
@@ -60,4 +63,18 @@ public class SearchMainPage {
 		}
 		return isSucceed;
 	}
+	
+	public boolean clickAccountSignIn() {
+		boolean isSucceed;
+		try {
+			accountLink.click();
+			isSucceed = true;
+		} catch(Exception e) {
+			e.printStackTrace();
+			isSucceed = false;
+		}
+		return isSucceed;
+	}
+	
+	
 }

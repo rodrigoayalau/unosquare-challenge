@@ -3,12 +3,12 @@
 <suite parallel="none" name="Failed suite [Default suite]">
   <test parallel="none" name="Default test(failed)">
     <classes>
-      <class name="scenarios.CellphoneScenario">
+      <class name="scenarios.SecondTestCase">
         <methods>
-          <include name="shopCartPageValidation"/>
           <include name="setUp"/>
+          <include name="newAccountDetails"/>
         </methods>
-      </class> <!-- scenarios.CellphoneScenario -->
+      </class> <!-- scenarios.SecondTestCase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
