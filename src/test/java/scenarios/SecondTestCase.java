@@ -14,7 +14,6 @@ import pages.HelpCustomerServicePage;
 import pages.SearchMainPage;
 import pages.SignInPage;
 import services.JsonService;
-import setup.KeyPad;
 import setup.SetUp;
 
 public class SecondTestCase extends SetUp {
@@ -25,6 +24,7 @@ public class SecondTestCase extends SetUp {
 	String accountName;
 	String accountEmail;
 	String searchCriteria;
+	String supportLink;
 
 	@BeforeClass(enabled = true)
 	public void setUp() throws IOException {
@@ -37,6 +37,7 @@ public class SecondTestCase extends SetUp {
 		this.driverExplorer = properties.getProperty("driverExplorer");
 		this.url = properties.getProperty("url");
 		this.searchCriteria = properties.getProperty("searchCriteria");
+		this.supportLink = properties.getProperty("supportLink");
 		initializeChromeExplorer();
 		driver.get(url);
 		driver.manage().window().maximize();
@@ -66,7 +67,7 @@ public class SecondTestCase extends SetUp {
 	}
 	
 	// 4. Fill Name field with the response of this API => [Options in the AC].
-	// Warning, sometimes this test could fail due a 429 while requesting the json from url
+	// **** Warning, sometimes this test could fail due a 429 while requesting the json from url
 	// 5. Fill Email field with the data from the API response Firstname.Lastname@fake.com
 	// 6. Click on Condition of Use link
 	@Test(priority = 3, enabled = true)
@@ -84,13 +85,13 @@ public class SecondTestCase extends SetUp {
 	}
 	
 	// 7. Locate the search bar and Search for Echo
-	@Test(priority = 3, enabled = true)
+	// 8. Locate "Echo support" options and click on it
+	@Test(priority = 4, enabled = true)
 	public void searchCriteria() {
 		HelpCustomerServicePage search = new HelpCustomerServicePage(driver);
-		KeyPad keypad = new KeyPad(driver);
 		try {
-			Assert.assertTrue(search.searchInInput(searchCriteria), "failed trying to search.");
-			//Assert.assertTrue(keypad.clickEnter(), "Failed trying to click enter.");
+			Assert.assertTrue(search.searchInInput(searchCriteria), "Failed trying to search.");
+			Assert.assertTrue(search.seachCustomerLink(supportLink), "Failed trying to click link.");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

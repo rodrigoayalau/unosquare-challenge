@@ -1,5 +1,8 @@
 package pages;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,6 +16,12 @@ public class HelpCustomerServicePage extends KeyPad{
 	
 	@FindBy(id="helpsearch")
 	WebElement helpSearchInput;
+	
+	@FindBy(className="a-link-normal")
+	List<WebElement> linkForCustomerSupport;
+	
+	@FindBy(xpath="//a[contains(text(), 'Echo Support')]")
+	WebElement linkForEchoSupport;
 	
 	public HelpCustomerServicePage(WebDriver driver) {
 		super(driver);
@@ -32,6 +41,25 @@ public class HelpCustomerServicePage extends KeyPad{
 		}
 		return isSucceed;
 	}
+	
+	public boolean seachCustomerLink(String linktoSearch) {
+		boolean isSucceed;
+//		List<WebElement> links = new ArrayList<WebElement>();
+		try {
+//			linkForCustomerSupport.forEach(item -> {
+//				links.add(item);
+//			});
+//			System.out.println(links);
+			linkForEchoSupport.click();
+			isSucceed = true;
+		} catch (Exception e) {
+			e.printStackTrace();
+			isSucceed = false;
+		}
+		return isSucceed;
+	}
+	
+	
 	
 	
 	
