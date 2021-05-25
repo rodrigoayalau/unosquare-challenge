@@ -31,41 +31,76 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">Test</td><td class="numi">10</td><td class="numi">10</td><td class="numi">0</td><td class="numi">0</td><td class="numi">34.4 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">2</td><td class="numi">2</td><td class="numi">0</td><td class="numi_attn">3</td><td class="numi">20.4 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
-<tr><th colspan="4">Test &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="1">scenarios.FirstTestCase</td><td><a href="#m1"><b>phoneSearch</b>  </a></td><td class="numi">1</td><td>1617745705069</td><td class="numi">2183</td></tr>
-<tr class="passedeven"><td rowspan="1">scenarios.SecondTestCase</td><td><a href="#m2"><b>newAccounts</b>  </a></td><td class="numi">1</td><td>1617745713130</td><td class="numi">693</td></tr>
-<tr class="passedodd"><td rowspan="1">scenarios.FirstTestCase</td><td><a href="#m3"><b>getPrice</b>  </a></td><td class="numi">1</td><td>1617745713824</td><td class="numi">3141</td></tr>
-<tr class="passedeven"><td rowspan="1">scenarios.SecondTestCase</td><td><a href="#m4"><b>newCustomerLink</b>  </a></td><td class="numi">1</td><td>1617745716966</td><td class="numi">397</td></tr>
-<tr class="passedodd"><td rowspan="1">scenarios.FirstTestCase</td><td><a href="#m5"><b>validatePrices</b>  </a></td><td class="numi">1</td><td>1617745717365</td><td class="numi">1460</td></tr>
-<tr class="passedeven"><td rowspan="1">scenarios.SecondTestCase</td><td><a href="#m6"><b>newAccountDetailsAndTermsConditions</b>  </a></td><td class="numi">1</td><td>1617745718826</td><td class="numi">1931</td></tr>
-<tr class="passedodd"><td rowspan="1">scenarios.FirstTestCase</td><td><a href="#m7"><b>clickCartButton</b>  </a></td><td class="numi">1</td><td>1617745720758</td><td class="numi">2097</td></tr>
-<tr class="passedeven"><td rowspan="1">scenarios.SecondTestCase</td><td><a href="#m8"><b>searchCriteria</b>  </a></td><td class="numi">1</td><td>1617745722856</td><td class="numi">1134</td></tr>
-<tr class="passedodd"><td rowspan="1">scenarios.FirstTestCase</td><td><a href="#m9"><b>shopCartPageValidation</b>  </a></td><td class="numi">1</td><td>1617745723991</td><td class="numi">655</td></tr>
-<tr class="passedeven"><td rowspan="1">scenarios.SecondTestCase</td><td><a href="#m10"><b>validateEchoSupport</b>  </a></td><td class="numi">1</td><td>1617745729338</td><td class="numi">118</td></tr>
+<tr><th colspan="4">Default test &#8212; failed (configuration methods)</th></tr>
+<tr class="failedodd"><td rowspan="1">scenarios.SecondTestCase</td><td><a href="#m1"><b>tearDown</b>  </a></td><td class="numi">1</td><td>1618016244158</td><td class="numi">0</td></tr>
+<tr><th colspan="4">Default test &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="3">scenarios.SecondTestCase</td><td><a href="#m2"><b>newAccountDetailsAndTermsConditions</b>  </a></td><td class="numi">1</td><td>1618016232635</td><td class="numi">792</td></tr><tr class="failedodd"><td><a href="#m3"><b>searchCriteria</b>  </a></td><td class="numi">1</td><td>1618016233428</td><td class="numi">10067</td></tr><tr class="failedodd"><td><a href="#m4"><b>validateEchoSupport</b>  </a></td><td class="numi">1</td><td>1618016243496</td><td class="numi">660</td></tr>
+<tr><th colspan="4">Default test &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="2">scenarios.SecondTestCase</td><td><a href="#m5"><b>newAccounts</b>  </a></td><td class="numi">1</td><td>1618016231384</td><td class="numi">867</td></tr><tr class="passedodd"><td><a href="#m6"><b>newCustomerLink</b>  </a></td><td class="numi">1</td><td>1618016232252</td><td class="numi">381</td></tr>
 </table>
-<h1>Test</h1>
-<h2 id="m1">scenarios.SecondTestCase:validateEchoSupport</h2>
+<h1>Default test</h1>
+<h2 id="m1">scenarios.SecondTestCase:tearDown</h2>
+<div style="padding-left:3em">
+<p>chrome not reachable
+  (Session info: chrome=89.0.4389.114)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-88S9RBJ&apos;, ip: &apos;192.168.0.5&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.114, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\idsay\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57964}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b32748afff092c5549a9cb62a18371b4</p>
+java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+<br/>at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+<br/>at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:442)
+<br/>at scenarios.SecondTestCase.tearDown(SecondTestCase.java:150)
+<br/>25 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">scenarios.SecondTestCase:newAccounts</h2>
+<h2 id="m2">scenarios.SecondTestCase:newAccountDetailsAndTermsConditions</h2>
+<div style="padding-left:3em">
+<p>Failed trying to create account. expected [true] but found [false]</p>
+org.testng.Assert.fail(Assert.java:94)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
+<br/>at org.testng.Assert.assertTrue(Assert.java:42)
+<br/>at scenarios.SecondTestCase.newAccountDetailsAndTermsConditions(SecondTestCase.java:110)
+<br/>25 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m3">scenarios.FirstTestCase:clickCartButton</h2>
+<h2 id="m3">scenarios.SecondTestCase:searchCriteria</h2>
+<div style="padding-left:3em">
+<p>Failed trying to search. expected [true] but found [false]</p>
+org.testng.Assert.fail(Assert.java:94)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
+<br/>at org.testng.Assert.assertTrue(Assert.java:42)
+<br/>at scenarios.SecondTestCase.searchCriteria(SecondTestCase.java:125)
+<br/>25 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m4">scenarios.FirstTestCase:getPrice</h2>
+<h2 id="m4">scenarios.SecondTestCase:validateEchoSupport</h2>
+<div style="padding-left:3em">
+<p>Failed trying to validate results. expected [true] but found [false]</p>
+org.testng.Assert.fail(Assert.java:94)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
+<br/>at org.testng.Assert.assertTrue(Assert.java:42)
+<br/>at scenarios.SecondTestCase.validateEchoSupport(SecondTestCase.java:140)
+<br/>25 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
 <h2 id="m5">scenarios.SecondTestCase:newCustomerLink</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m6">scenarios.SecondTestCase:searchCriteria</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m7">scenarios.FirstTestCase:validatePrices</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m8">scenarios.SecondTestCase:newAccountDetailsAndTermsConditions</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m9">scenarios.FirstTestCase:phoneSearch</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m10">scenarios.FirstTestCase:shopCartPageValidation</h2>
+<h2 id="m6">scenarios.SecondTestCase:newAccounts</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>
